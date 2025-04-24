@@ -1,0 +1,3 @@
+/home/Lior/Documents/projects/SpiTest/build/CMakeFiles/main.dir
+/home/Lior/Documents/projects/SpiTest/build/CMakeFiles/edit_cache.dir
+/home/Lior/Documents/projects/SpiTest/build/CMakeFiles/rebuild_cache.dir
