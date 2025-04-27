@@ -148,6 +148,30 @@ bool SpiInterface::Transfer(const std::vector<uint8_t>& tx, std::vector<uint8_t>
 
 //     return ioctl(_spiInstance, SPI_IOC_MESSAGE(1), &transaction) >= 1;
 // }
+
+int SpiInterface::Transfer(const uint8_t* tx, uint8_t* rx, uint32_t length)
+{
+    std::lock_guard<std::mutex> lock(_mutex);
+
+    struct spi_ioc_transfer transaction = {};
+    transaction.tx_buf = reinterpret_cast<unsigned long>(tx);
+    transaction.rx_buf = reinterpret_cast<unsigned long>(rx);
+    transaction.len = length;
+    transaction.speed_hz = _currentSpeed;
+    transaction.bits_per_word = 8;
+    transaction.delay_usecs = 0;
+    transaction.cs_change = 1;
+
+    int ret = ioctl(_spiInstance, SPI_IOC_MESSAGE(1), &transaction);
+    if (ret < 0) {
+        perror("SPI Transfer failed");
+    } else if (ret != static_cast<int>(length)) {
+        fprintf(stderr, "Warning: only %d/%u bytes transferred\n", ret, length);
+    }
+
+    return ret;
+}
+
 void SpiInterface::_ReceiveTask()
 {
     while (_isRunning)
@@ -156,19 +180,19 @@ void SpiInterface::_ReceiveTask()
         std::vector<uint8_t> txLen(1, 0x00);  // Dummy transmit
         std::vector<uint8_t> rxLen;
 
-        if (!Transfer(txLen, rxLen))
-        {
-            std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            continue;
-        }
+        // if (!Transfer(txLen, rxLen))
+        // {
+        //     std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        //     continue;
+        // }
 
-        if (rxLen.empty())
-        {
-            std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            continue;
-        }
+        // if (rxLen.empty())
+        // {
+        //     std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        //     continue;
+        // }
 
-        uint8_t expectedLength = rxLen[0];
+        uint8_t expectedLength = 250;
 
         if (expectedLength == 0 || expectedLength > 255)
         {
@@ -182,7 +206,7 @@ void SpiInterface::_ReceiveTask()
 
         if (Transfer(txDummy, rxPayload))
         {
-            if (_rxCompletedHandler && !rxPayload.empty())
+            if (_rxCompletedHandler && rxPayload.at(1) == 0X55)
             {
                 _rxCompletedHandler(rxPayload);
             }

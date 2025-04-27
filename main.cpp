@@ -24,7 +24,7 @@ void MyRxHandler(const std::vector<uint8_t>& packetReceived)
 int main()
 {
     try {
-    SpiInterface::Instance().SetProperties(SpiInterface::SPI_0, static_cast<uint32_t>(SpiInterface::SPISpeed::SPEED_500_KHZ), 0, 8, MyRxHandler);
+    SpiInterface::Instance().SetProperties(SpiInterface::SPI_0, static_cast<uint32_t>(SpiInterface::SPISpeed::SPEED_4_MHZ), 0, 8, MyRxHandler);
     printf("Before Rx compelted set\n");
     // SpiInterface::Instance().SetRxCompletedHandler(MyRxHandler);
     }

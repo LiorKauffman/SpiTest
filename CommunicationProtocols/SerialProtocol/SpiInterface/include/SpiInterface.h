@@ -37,6 +37,7 @@ static constexpr auto SPI_0 = "/dev/spidev0.0";
     bool Transmit(const std::vector<uint8_t>& tx) override;
     bool Receive(std::vector<uint8_t>& rx, size_t length) override;
     bool Transfer(const std::vector<uint8_t>& tx, std::vector<uint8_t>& rx);
+    int Transfer(const uint8_t* tx, uint8_t* rx, uint32_t length);
 
     inline const std::string& GetDeviceName() const override { return _deviceName; }
     inline uint32_t GetCurrentSpeed() const override { return _currentSpeed; }
