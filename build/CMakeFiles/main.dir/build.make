@@ -111,11 +111,41 @@ CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiIn
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp -o CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.s
 
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o: /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o -MF CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o.d -o CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o -c /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp
+
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp > CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.i
+
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp -o CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.s
+
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o: /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o -MF CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o.d -o CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o -c /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp
+
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp > CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.i
+
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp -o CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
 "CMakeFiles/main.dir/Hello/src/Hello.cpp.o" \
-"CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o"
+"CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o" \
+"CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o" \
+"CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -123,9 +153,11 @@ main_EXTERNAL_OBJECTS =
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/Hello/src/Hello.cpp.o
 main: CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o
+main: CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o
+main: CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

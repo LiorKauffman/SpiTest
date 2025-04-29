@@ -1,8 +1,6 @@
-CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o: \
- /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp \
+CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o: \
+ /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp \
  /usr/include/stdc-predef.h \
- /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/SpiInterface/include/SpiInterface.h \
- /home/Lior/Documents/projects/SpiTest/Utils/Singleton/include/Singleton.h \
  /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/ISerial/include/ISerial.h \
  /usr/include/c++/12/string \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
@@ -177,22 +175,4 @@ CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiIn
  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/linux/spi/spidev.h \
- /usr/include/linux/types.h /usr/lib/linux/uapi/arm64/asm/types.h \
- /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
- /usr/lib/linux/uapi/arm64/asm/bitsperlong.h \
- /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h /usr/lib/linux/uapi/arm64/asm/posix_types.h \
- /usr/include/asm-generic/posix_types.h /usr/include/linux/ioctl.h \
- /usr/lib/linux/uapi/arm64/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
- /usr/include/linux/spi/spi.h /usr/include/linux/const.h \
- /usr/include/fcntl.h /usr/include/aarch64-linux-gnu/bits/fcntl.h \
- /usr/include/aarch64-linux-gnu/bits/fcntl-linux.h \
- /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h \
- /usr/include/linux/falloc.h /usr/include/aarch64-linux-gnu/bits/stat.h \
- /usr/include/aarch64-linux-gnu/bits/struct_stat.h \
- /usr/include/aarch64-linux-gnu/sys/ioctl.h \
- /usr/include/aarch64-linux-gnu/bits/ioctls.h \
- /usr/lib/linux/uapi/arm64/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
- /usr/include/aarch64-linux-gnu/bits/ioctl-types.h \
- /usr/include/aarch64-linux-gnu/sys/ttydefaults.h
+ /usr/include/linux/close_range.h

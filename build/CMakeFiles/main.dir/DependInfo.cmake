@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp" "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o" "gcc" "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o.d"
   "/home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp" "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o" "gcc" "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o.d"
+  "/home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp" "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o" "gcc" "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o.d"
   "/home/Lior/Documents/projects/SpiTest/Hello/src/Hello.cpp" "CMakeFiles/main.dir/Hello/src/Hello.cpp.o" "gcc" "CMakeFiles/main.dir/Hello/src/Hello.cpp.o.d"
   "/home/Lior/Documents/projects/SpiTest/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
   )

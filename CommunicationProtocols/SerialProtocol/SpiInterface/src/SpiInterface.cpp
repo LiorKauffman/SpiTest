@@ -57,16 +57,16 @@ _currentSpeed = spiSpeed;
 
 printf("Device name: %s\n", _deviceName.c_str());
 
-_spiInstance = open(_deviceName.c_str(), O_RDWR);
-printf("_spiInstance = %d\n", _spiInstance);
-if (_spiInstance < 0)
+_serialInstance = open(_deviceName.c_str(), O_RDWR);
+printf("_spiInstance = %d\n", _serialInstance);
+if (_serialInstance < 0)
 {
 perror("SPI Open");
 // throw std::runtime_error("Failed to open SPI device");
 }
 
 // Set SPI mode (MODE0, MODE1, etc.)
-if (ioctl(_spiInstance, SPI_IOC_WR_MODE, &mode) == -1)
+if (ioctl(_serialInstance, SPI_IOC_WR_MODE, &mode) == -1)
 {
 perror("SPI Set Mode");
 // throw std::runtime_error("Failed to set SPI mode");
@@ -75,14 +75,14 @@ perror("SPI Set Mode");
 // printf("Line = %d\n", __LINE__);
 
 // Set bits per word
-if (ioctl(_spiInstance, SPI_IOC_WR_BITS_PER_WORD, &bits) == -1)
+if (ioctl(_serialInstance, SPI_IOC_WR_BITS_PER_WORD, &bits) == -1)
 {
 perror("SPI Set Bits");
 // throw std::runtime_error("Failed to set bits per word");
 }
 
 // Set max speed
-if (ioctl(_spiInstance, SPI_IOC_WR_MAX_SPEED_HZ, &_currentSpeed) == -1)
+if (ioctl(_serialInstance, SPI_IOC_WR_MAX_SPEED_HZ, &_currentSpeed) == -1)
 {
 perror("SPI Set Speed");
 // throw std::runtime_error("Failed to set SPI speed");
@@ -98,21 +98,21 @@ _isRunning = true;
 _receiveThread = std::thread(&SpiInterface::_ReceiveTask, this);
 }
 
-bool SpiInterface::Transmit(const std::vector<uint8_t>& txData)
-{
-    std::lock_guard<std::mutex> lock(_mutex);
+// bool SpiInterface::Transmit(const std::vector<uint8_t>& txData)
+// {
+//     std::lock_guard<std::mutex> lock(_mutex);
 
-    return write(_spiInstance, txData.data(), txData.size()) == static_cast<ssize_t>(txData.size());
-}
+//     return write(_serialInstance, txData.data(), txData.size()) == static_cast<ssize_t>(txData.size());
+// }
 
-bool SpiInterface::Receive(std::vector<uint8_t>& rx, size_t length)
-{
-    std::lock_guard<std::mutex> lock(_mutex);
+// bool SpiInterface::Receive(std::vector<uint8_t>& rx, size_t length)
+// {
+//     std::lock_guard<std::mutex> lock(_mutex);
 
-    rx.resize(length);
+//     rx.resize(length);
 
-    return read(_spiInstance, rx.data(), length) == static_cast<ssize_t>(length);
-}
+//     return read(_serialInstance, rx.data(), length) == static_cast<ssize_t>(length);
+// }
 
 bool SpiInterface::Transfer(const std::vector<uint8_t>& tx, std::vector<uint8_t>& rx)
 {
@@ -129,7 +129,7 @@ bool SpiInterface::Transfer(const std::vector<uint8_t>& tx, std::vector<uint8_t>
     transaction.delay_usecs = 0;
     transaction.cs_change = 0;
 
-    int ret = ioctl(_spiInstance, SPI_IOC_MESSAGE(1), &transaction);
+    int ret = ioctl(_serialInstance, SPI_IOC_MESSAGE(1), &transaction);
     return ret >= 1;
 }
 
@@ -162,7 +162,7 @@ int SpiInterface::Transfer(const uint8_t* tx, uint8_t* rx, uint32_t length)
     transaction.delay_usecs = 0;
     transaction.cs_change = 1;
 
-    int ret = ioctl(_spiInstance, SPI_IOC_MESSAGE(1), &transaction);
+    int ret = ioctl(_serialInstance, SPI_IOC_MESSAGE(1), &transaction);
     if (ret < 0) {
         perror("SPI Transfer failed");
     } else if (ret != static_cast<int>(length)) {
