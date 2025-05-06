@@ -15,6 +15,7 @@ bool ISerial::Transmit(const std::vector<uint8_t>& tx)
 {
     std::lock_guard<std::mutex> lock(_mutex);
     
+    printf("Length: %d\n", tx.size());
     printf("Send: ");
 
     for (const auto& byte : tx)

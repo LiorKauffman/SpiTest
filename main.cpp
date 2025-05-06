@@ -12,6 +12,7 @@
 
 void MyRxHandler(const std::vector<uint8_t>& packetReceived)
 {
+    printf("Length = %d\n", packetReceived.size());
     printf("\nPacket Received: ");
 
     for (auto& byteInPacket : packetReceived)
@@ -34,14 +35,19 @@ int main()
         fprintf(stderr, "excepction %s\n", ex.what());
     }
 
-    std::vector<uint8_t> tx = {0x01, 0x02, 0x03, 0x04, 0x05};
+    std::vector<uint8_t> tx (100);
 
     // std::vector<uint8_t> tx = {'H', 'e', 'l', 'l', 'o', '\r', '\n'};
+
+    for (auto counter = 0; counter < 100; counter++)
+    {
+        tx.at(counter) = counter;
+    }
 
     while(true)
     {
         
-        UartInterface::Instance().Transmit(tx);
+        // UartInterface::Instance().Transmit(tx);
         std::this_thread::sleep_for(std::chrono::milliseconds(3000));
     }
 
