@@ -208,4 +208,5 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/12/bits/atomic_base.h \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
  /usr/include/c++/12/mutex /usr/include/c++/12/bits/std_mutex.h \
- /usr/include/c++/12/bits/unique_lock.h
+ /usr/include/c++/12/bits/unique_lock.h \
+ /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/UartInterface/include/UartInterface.h

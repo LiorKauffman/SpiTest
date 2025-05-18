@@ -3,12 +3,12 @@
 
 #include "Utils/Singleton/include/Singleton.h"
 #include "CommunicationProtocols/SerialProtocol/ISerial/include/ISerial.h"
-#include <functional>
-#include <atomic>
-#include <mutex>
-#include <thread>
+// #include <functional>
+// #include <atomic>
+// #include <mutex>
+// #include <thread>
 #include <linux/spi/spidev.h>
-#include <string>
+// #include <string>
 
 class SpiInterface : public Singleton<SpiInterface>, public ISerial
 {
@@ -33,35 +33,35 @@ static constexpr auto SPI_0 = "/dev/spidev0.0";
         uint32_t baudRateOrSpeed,
         uint8_t mode,
         uint8_t bits,
-        std::function<void(const std::vector<uint8_t>&)>) override;
-    bool Transmit(const std::vector<uint8_t>& tx) override;
-    bool Receive(std::vector<uint8_t>& rx, size_t length) override;
+        std::function<void(const std::vector<uint8_t>&)> rxCompletedHandler) override;
+    // bool Transmit(const std::vector<uint8_t>& tx) override;
+    // bool Receive(std::vector<uint8_t>& rx, size_t length) override;
     bool Transfer(const std::vector<uint8_t>& tx, std::vector<uint8_t>& rx);
     int Transfer(const uint8_t* tx, uint8_t* rx, uint32_t length);
 
-    inline const std::string& GetDeviceName() const override { return _deviceName; }
-    inline uint32_t GetCurrentSpeed() const override { return _currentSpeed; }
-    inline bool IsRunning() const override { return _isRunning; }
-    inline auto SetRxCompletedHandler(std::function<void(const std::vector<uint8_t>&)> rxCompletedHandler)
-    {
-        _rxCompletedHandler = rxCompletedHandler;
-    }
+    // inline const std::string& GetDeviceName() const override { return _deviceName; }
+    // inline uint32_t GetCurrentSpeed() const override { return _currentSpeed; }
+    // inline bool IsRunning() const override { return _isRunning; }
+    // inline auto SetRxCompletedHandler(std::function<void(const std::vector<uint8_t>&)> rxCompletedHandler)
+    // {
+    //     _rxCompletedHandler = rxCompletedHandler;
+    // }
 
 private:
     SpiInterface() = default;
     ~SpiInterface() = default;
 
-    std::string _deviceName;
-    uint32_t _currentSpeed;
-    int _spiInstance;
+    // std::string _deviceName;
+    // uint32_t _currentSpeed;
+    // int _serialInstance;
     // bool _isRunning;
-    std::mutex _mutex;
-    std::atomic<bool> _isRunning;
-    std::thread _receiveThread;
+    // std::mutex _mutex;
+    // std::atomic<bool> _isRunning;
+    // std::thread _receiveThread;
     
     
 
-    void _ReceiveTask();
+    void _ReceiveTask() override;
 };
 
 #endif // _SPI_INTERFACE_H

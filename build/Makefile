@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.o: CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o
+.PHONY : CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.o
+
+# target to build an object file
+CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o
+.PHONY : CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o
+
+CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.i: CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.i
+.PHONY : CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.i
+
+# target to preprocess a source file
+CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.i
+.PHONY : CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.i
+
+CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.s: CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.s
+.PHONY : CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.s
+
+# target to generate assembly for a file
+CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.s
+.PHONY : CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.s
+
 CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.o: CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o
 .PHONY : CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.o
 
@@ -152,6 +176,30 @@ CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.s: Communica
 CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.s
 .PHONY : CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.s
+
+CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.o: CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o
+.PHONY : CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.o
+
+# target to build an object file
+CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o
+.PHONY : CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o
+
+CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.i: CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.i
+.PHONY : CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.i
+
+# target to preprocess a source file
+CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.i
+.PHONY : CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.i
+
+CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.s: CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.s
+.PHONY : CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.s
+
+# target to generate assembly for a file
+CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.s
+.PHONY : CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.s
 
 Hello/src/Hello.o: Hello/src/Hello.cpp.o
 .PHONY : Hello/src/Hello.o
@@ -210,9 +258,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.o"
+	@echo "... CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.i"
+	@echo "... CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.s"
 	@echo "... CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.o"
 	@echo "... CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.i"
 	@echo "... CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.s"
+	@echo "... CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.o"
+	@echo "... CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.i"
+	@echo "... CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.s"
 	@echo "... Hello/src/Hello.o"
 	@echo "... Hello/src/Hello.i"
 	@echo "... Hello/src/Hello.s"

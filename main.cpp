@@ -7,38 +7,68 @@
 #include <chrono>
 #include "Hello/include/Hello.h"
 #include "CommunicationProtocols/SerialProtocol/SpiInterface/include/SpiInterface.h"
+#include "CommunicationProtocols/SerialProtocol/UartInterface/include/UartInterface.h"
 
 
 void MyRxHandler(const std::vector<uint8_t>& packetReceived)
 {
-    printf("\nPacket Received: ");
+    // printf("Length = %d\n", packetReceived.size());
+    // printf("\nPacket Received: ");
 
-    for (auto& byteInPacket : packetReceived)
-    {
-        printf("0x%x ", byteInPacket);
-    }
+    // for (auto& byteInPacket : packetReceived)
+    // {
+    //     printf("0x%x ", byteInPacket);
+    // }
 
-    printf("\n");
+    // printf("\n");
 }
 
 int main()
 {
     try {
-    SpiInterface::Instance().SetProperties(SpiInterface::SPI_0, static_cast<uint32_t>(SpiInterface::SPISpeed::SPEED_4_MHZ), 0, 8, MyRxHandler);
+    // SpiInterface::Instance().SetProperties(SpiInterface::SPI_0, static_cast<uint32_t>(SpiInterface::SPISpeed::SPEED_4_MHZ), 0, 8, MyRxHandler);
+    UartInterface::Instance().SetProperties(UartInterface::UART_0, 115200, 0, 0, MyRxHandler);
     printf("Before Rx compelted set\n");
     // SpiInterface::Instance().SetRxCompletedHandler(MyRxHandler);
     }
     catch(const std::exception& ex){
         fprintf(stderr, "excepction %s\n", ex.what());
     }
+
+    std::vector<uint8_t> tx;
+
+    // std::vector<uint8_t> tx = {'H', 'e', 'l', 'l', 'o', '\r', '\n'};
+
+
+    for (auto counter = 0; counter < 3; counter++)
+    {
+
+        // tx.at(counter) = counter;
+        tx.push_back(0xaa);
+    }
+
+
+    for (auto counter = 0; counter < UINT8_MAX*2; counter++)
+    {
+
+        // tx.at(counter) = counter;
+        tx.push_back(counter);
+    }
+
+    for (auto counter = 0; counter < 2; counter++)
+    {
+
+        // tx.at(counter) = counter;
+        tx.push_back(0xff);
+    }
+
+
     while(true)
     {
-        std::vector<uint8_t> tx = {0xa, 0xb};
-        std::vector<uint8_t> lenTx = {2};
-        // SpiInterface::Instance().Transmit(lenTx);
-        // SpiInterface::Instance().Transmit(tx);
-
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        
+        
+        UartInterface::Instance().Transmit(tx);
+        std::this_thread::sleep_for(std::chrono::milliseconds(3000));
     }
 
     return 0;

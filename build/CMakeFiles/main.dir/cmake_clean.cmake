@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o"
+  "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o.d"
   "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o"
   "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o.d"
+  "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o"
+  "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o.d"
   "CMakeFiles/main.dir/Hello/src/Hello.cpp.o"
   "CMakeFiles/main.dir/Hello/src/Hello.cpp.o.d"
   "CMakeFiles/main.dir/main.cpp.o"
