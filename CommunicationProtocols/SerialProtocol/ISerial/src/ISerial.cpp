@@ -14,18 +14,21 @@ void ISerial::SetProperties(const std::string& deviceName,
 bool ISerial::Transmit(const std::vector<uint8_t>& tx)
 {
     std::lock_guard<std::mutex> lock(_mutex);
+    auto packetToSend = tx;
+    packetToSend.insert(packetToSend.begin(), _START_BARKER.begin(), _START_BARKER.end());
+    packetToSend.insert(packetToSend.end(), _END_BARKER.begin(), _END_BARKER.end());
     
-    printf("Length: %d\n", tx.size());
+    printf("Length: %d\n", packetToSend.size());
     printf("Send: ");
 
-    for (const auto& byte : tx)
+    for (const auto& byte : packetToSend)
     {
         printf("0x%x ", byte);
     }
 
     printf("\n");
 
-    return write(_serialInstance, tx.data(), tx.size()) == static_cast<ssize_t>(tx.size());
+    return write(_serialInstance, packetToSend.data(), packetToSend.size()) == static_cast<ssize_t>(packetToSend.size());
 }
 
 bool ISerial::Receive(std::vector<uint8_t>& rx, size_t length)

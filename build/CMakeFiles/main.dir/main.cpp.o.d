@@ -209,4 +209,13 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
  /usr/include/c++/12/mutex /usr/include/c++/12/bits/std_mutex.h \
  /usr/include/c++/12/bits/unique_lock.h \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/CyclicBuffer.h \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/ICyclicBuffer.h \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/IBuffer.h \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/IBuffer.hpp \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/ICyclicBuffer.hpp \
+ /usr/include/c++/12/iterator /usr/include/c++/12/bits/stream_iterator.h \
+ /usr/include/c++/12/cstddef \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/CyclicBuffer.hpp \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/CyclicBuffer.h \
  /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/UartInterface/include/UartInterface.h

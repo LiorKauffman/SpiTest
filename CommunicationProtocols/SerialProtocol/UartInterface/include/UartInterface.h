@@ -3,12 +3,6 @@
 
 #include "Utils/Singleton/include/Singleton.h"
 #include "CommunicationProtocols/SerialProtocol/ISerial/include/ISerial.h"
-// #include <functional>
-// #include <atomic>
-// #include <mutex>
-// #include <thread>
-// #include <string>
-
 
 class UartInterface : public Singleton<UartInterface>, public ISerial
 {
@@ -22,15 +16,12 @@ public:
         uint8_t mode,
         uint8_t bits,
         std::function<void(const std::vector<uint8_t>&)>) override;
-    // bool Transmit(const std::vector<uint8_t>& tx) override;
-    // bool Receive(std::vector<uint8_t>& rx, size_t length) override;
     
     private:
-    UartInterface() = default;
-    ~UartInterface() = default;
-    
-    void _ReceiveTask() override;
-
+        UartInterface() = default;
+        ~UartInterface() = default;
+        
+        void _ReceiveTask() override;
 };
 
 #endif //_UART_INTERFACE_H

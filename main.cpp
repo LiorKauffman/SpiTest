@@ -12,15 +12,15 @@
 
 void MyRxHandler(const std::vector<uint8_t>& packetReceived)
 {
-    // printf("Length = %d\n", packetReceived.size());
-    // printf("\nPacket Received: ");
+    printf("Length = %d\n", packetReceived.size());
+    printf("\nPacket Received: ");
 
-    // for (auto& byteInPacket : packetReceived)
-    // {
-    //     printf("0x%x ", byteInPacket);
-    // }
+    for (auto& byteInPacket : packetReceived)
+    {
+        printf("0x%x ", byteInPacket);
+    }
 
-    // printf("\n");
+    printf("\n");
 }
 
 int main()
@@ -40,12 +40,14 @@ int main()
     // std::vector<uint8_t> tx = {'H', 'e', 'l', 'l', 'o', '\r', '\n'};
 
 
-    for (auto counter = 0; counter < 3; counter++)
-    {
+    // for (auto counter = 0; counter < 2; counter++)
+    // {
 
-        // tx.at(counter) = counter;
-        tx.push_back(0xaa);
-    }
+    //     // tx.at(counter) = counter;
+    //     tx.push_back(0xaa);
+    // }
+
+    // tx.push_back(0x02);
 
 
     for (auto counter = 0; counter < UINT8_MAX*2; counter++)
@@ -55,12 +57,7 @@ int main()
         tx.push_back(counter);
     }
 
-    for (auto counter = 0; counter < 2; counter++)
-    {
-
-        // tx.at(counter) = counter;
-        tx.push_back(0xff);
-    }
+    
 
 
     while(true)
@@ -68,6 +65,7 @@ int main()
         
         
         UartInterface::Instance().Transmit(tx);
+        
         std::this_thread::sleep_for(std::chrono::milliseconds(3000));
     }
 

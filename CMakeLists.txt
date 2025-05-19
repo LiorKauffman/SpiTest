@@ -11,6 +11,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/CommunicationProtocols/SerialProtocol/SpiInterface/include
     ${CMAKE_SOURCE_DIR}/CommunicationProtocols/SerialProtocol/ISerial/include
     ${CMAKE_SOURCE_DIR}/CommunicationProtocols/SerialProtocol/UartInterface/include
+    ${CMAKE_SOURCE_DIR}/DataStruct/Include
     ${CMAKE_SOURCE_DIR}
 )
 
