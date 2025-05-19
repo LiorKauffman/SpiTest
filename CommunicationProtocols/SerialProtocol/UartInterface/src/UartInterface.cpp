@@ -70,25 +70,106 @@ void UartInterface::SetProperties(const std::string& deviceName,
     _receiveThread = std::thread(&UartInterface::_ReceiveTask, this);
 
 }
-
 void UartInterface::_ReceiveTask()
 {
+    std::array<uint8_t, _BUFFER_SIZE> packet;
+
     while (_isRunning)
     {
-        std::vector<uint8_t> buffer(_BUFFER_SIZE);
-
-        auto bytesRead = read(_serialInstance, buffer.data(), buffer.size());
+        auto bytesRead = read(_serialInstance, packet.data(), packet.size());
 
         if (bytesRead > 0)
         {
-            buffer.resize(bytesRead);
+            printf("Bytes received: ");
+            for (int i = 0; i < bytesRead; ++i)
+                printf("0x%x ", packet[i]);
+            printf("\n");
 
-            if (_rxCompletedHandler)
+            auto packetBegin = packet.begin();
+            auto packetEnd = packet.begin() + bytesRead;
+
+            if (!_isStartBakerFound && !_isEndBarkerFound)
             {
-                _rxCompletedHandler(buffer);
+                printf("[STATE] Looking for START barker\n");
+                auto itStart = std::search(packetBegin, packetEnd, _START_BARKER.begin(), _START_BARKER.end());
+
+                if (itStart == packetEnd)
+                {
+                    printf("Start barker not found\n");
+                    _isStartBakerFound = _isEndBarkerFound = false;
+                }
+                else
+                {
+                    _isStartBakerFound = true;
+
+                    auto itEnd = std::search(itStart + _START_BARKER.size(), packetEnd, _END_BARKER.begin(), _END_BARKER.end());
+                    if (itEnd == packetEnd)
+                    {
+                        printf("[STATE] Start found, waiting for END\n");
+                        _cmdToParse.insert(_cmdToParse.end(), itStart + _START_BARKER.size(), packetEnd);
+                        _isEndBarkerFound = false;
+                    }
+                    else
+                    {
+                        printf("[STATE] Start and END barker found in same packet\n");
+                        _cmdToParse.insert(_cmdToParse.end(), itStart + _START_BARKER.size(), itEnd);
+                        _isEndBarkerFound = true;
+                    }
+                }
             }
+            else if (_isStartBakerFound && !_isEndBarkerFound)
+            {
+                printf("[STATE] Waiting for END barker...\n");
+                auto itEnd = std::search(packetBegin, packetEnd, _END_BARKER.begin(), _END_BARKER.end());
+
+                if (itEnd == packetEnd)
+                {
+                    _cmdToParse.insert(_cmdToParse.end(), packetBegin, packetEnd);
+                }
+                else
+                {
+                    _cmdToParse.insert(_cmdToParse.end(), packetBegin, itEnd);
+                    _isEndBarkerFound = true;
+                }
+            }
+
+            if (_isStartBakerFound && _isEndBarkerFound)
+            {
+                printf("[STATE] Full packet received! Size = %zu\n", _cmdToParse.size());
+                if (_rxCompletedHandler)
+                {
+                    _rxCompletedHandler(_cmdToParse);
+                }
+                _cmdToParse.clear();
+                _isStartBakerFound = _isEndBarkerFound = false;
+            }
+
+            // Reset buffer just in case (not strictly necessary)
+            std::fill(packet.begin(), packet.end(), 0x00);
         }
 
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
 }
+
+// void UartInterface::_ReceiveTask()
+// {
+//     while (_isRunning)
+//     {
+//         std::vector<uint8_t> buffer(_BUFFER_SIZE);
+
+//         auto bytesRead = read(_serialInstance, buffer.data(), buffer.size());
+
+//         if (bytesRead > 0)
+//         {
+//             buffer.resize(bytesRead);
+
+//             if (_rxCompletedHandler)
+//             {
+//                 _rxCompletedHandler(buffer);
+//             }
+//         }
+
+//         std::this_thread::sleep_for(std::chrono::milliseconds(10));
+//     }
+// }

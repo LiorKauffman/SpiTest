@@ -10,6 +10,7 @@
 #include <thread>
 #include <string>
 #include "unistd.h"
+#include "DataStruct/Include/Buffer/CyclicBuffer.h"
 
 class ISerial {
 public:
@@ -35,6 +36,8 @@ public:
 
 protected:
     static constexpr auto _BUFFER_SIZE = 1024;
+    static constexpr auto _START_BARKER = {0XAA, 0XAA};
+    static constexpr auto _END_BARKER = {0XFF, 0XFF};
 
     std::function<void(const std::vector<uint8_t>&)> _rxCompletedHandler;
     std::string _deviceName;
@@ -43,10 +46,13 @@ protected:
     std::atomic<bool> _isRunning;
     std::thread _receiveThread;
     int _serialInstance;
+    bool _isStartBakerFound;
+    bool _isEndBarkerFound;
+    std::vector<uint8_t> _cmdToParse;
+    datastruct::buffer::CyclicBuffer<std::vector<uint8_t>, _BUFFER_SIZE> _rxCyclicBuffer;
 
 private:
     virtual void _ReceiveTask() = 0;
-
 };
 
 #endif //_ISERIAL_H

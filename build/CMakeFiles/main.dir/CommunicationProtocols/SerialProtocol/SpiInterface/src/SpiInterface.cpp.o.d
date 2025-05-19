@@ -177,9 +177,34 @@ CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiIn
  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/linux/spi/spidev.h \
- /usr/include/linux/types.h /usr/lib/linux/uapi/arm64/asm/types.h \
- /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/linux/close_range.h \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/CyclicBuffer.h \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/ICyclicBuffer.h \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/IBuffer.h \
+ /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
+ /usr/include/c++/12/ios /usr/include/c++/12/bits/ios_base.h \
+ /usr/include/c++/12/bits/locale_classes.h \
+ /usr/include/c++/12/bits/locale_classes.tcc \
+ /usr/include/c++/12/streambuf /usr/include/c++/12/bits/streambuf.tcc \
+ /usr/include/c++/12/bits/basic_ios.h \
+ /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
+ /usr/include/wctype.h /usr/include/aarch64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_base.h \
+ /usr/include/c++/12/bits/streambuf_iterator.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_inline.h \
+ /usr/include/c++/12/bits/locale_facets.tcc \
+ /usr/include/c++/12/bits/basic_ios.tcc \
+ /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
+ /usr/include/c++/12/bits/istream.tcc \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/IBuffer.hpp \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/ICyclicBuffer.hpp \
+ /usr/include/c++/12/iterator /usr/include/c++/12/bits/stream_iterator.h \
+ /usr/include/c++/12/cstddef \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/CyclicBuffer.hpp \
+ /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/CyclicBuffer.h \
+ /usr/include/linux/spi/spidev.h /usr/include/linux/types.h \
+ /usr/lib/linux/uapi/arm64/asm/types.h /usr/include/asm-generic/types.h \
+ /usr/include/asm-generic/int-ll64.h \
  /usr/lib/linux/uapi/arm64/asm/bitsperlong.h \
  /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
  /usr/include/linux/stddef.h /usr/lib/linux/uapi/arm64/asm/posix_types.h \
