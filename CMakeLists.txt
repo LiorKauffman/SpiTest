@@ -12,6 +12,8 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/CommunicationProtocols/SerialProtocol/ISerial/include
     ${CMAKE_SOURCE_DIR}/CommunicationProtocols/SerialProtocol/UartInterface/include
     ${CMAKE_SOURCE_DIR}/DataStruct/Include
+    ${CMAKE_SOURCE_DIR}/Parser/include
+    ${CMAKE_SOURCE_DIR}/Commands/include
     ${CMAKE_SOURCE_DIR}
 )
 
@@ -22,6 +24,10 @@ set(SOURCES
     CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp
     CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp
     CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp
+    Parser/src/Parser.cpp
+    Commands/HciCommand.cpp
+    Commands/PowerOffPiCommand.cpp
+    Commands/PowerOnPiCommand.cpp
     # Singleton/Singleton.cpp
 )
 

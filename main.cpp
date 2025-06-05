@@ -8,6 +8,8 @@
 #include "Hello/include/Hello.h"
 #include "CommunicationProtocols/SerialProtocol/SpiInterface/include/SpiInterface.h"
 #include "CommunicationProtocols/SerialProtocol/UartInterface/include/UartInterface.h"
+#include "Parser/include/Parser.h"
+#include "Commands/include/PowerOffPiCommand.h"
 
 
 void MyRxHandler(const std::vector<uint8_t>& packetReceived)
@@ -21,6 +23,8 @@ void MyRxHandler(const std::vector<uint8_t>& packetReceived)
     }
 
     printf("\n");
+
+    Parser::Instance().ParseCmd(packetReceived.data(), packetReceived.size());
 }
 
 int main()
@@ -34,6 +38,19 @@ int main()
     catch(const std::exception& ex){
         fprintf(stderr, "excepction %s\n", ex.what());
     }
+    Parser::Instance().SetCommandsType({(uint8_t)Parser::CmdType::CMD_HELLO,
+        (uint8_t)Parser::CmdType::CMD_SENSOR_DATA,
+        (uint8_t)Parser::CmdType::CMD_ERROR,
+        (uint8_t)Parser::CmdType::CMD_CONTROL,
+        (uint8_t)Parser::CmdType::CMD_HCI,
+        (uint8_t)Parser::CmdType::CMD_ACK,
+        (uint8_t)Parser::CmdType::CMD_POWEROFF,
+        (uint8_t)Parser::CmdType::CMD_POWERON});
+
+// Parser::Instance().RegisterHandler((uint8_t)CMD_HCI, std::make_unique<HciCommand>());
+
+Parser::Instance().RegisterHandler((uint8_t)Parser::CmdType::CMD_POWEROFF, std::make_unique<PowerOffPiCommand>());
+// Parser::Instance().RegisterHandler((uint8_t)CMD_POWERON_PI, std::make_unique<PowerOnPiCommand>());
 
     std::vector<uint8_t> tx;
 
@@ -50,7 +67,7 @@ int main()
     // tx.push_back(0x02);
 
 
-    for (auto counter = 0; counter < UINT8_MAX*2; counter++)
+    for (auto counter = 0; counter < UINT8_MAX; counter++)
     {
 
         // tx.at(counter) = counter;
@@ -64,9 +81,9 @@ int main()
     {
         
         
-        UartInterface::Instance().Transmit(tx);
+        // UartInterface::Instance().Transmit(tx);
         
-        std::this_thread::sleep_for(std::chrono::milliseconds(3000));
+        std::this_thread::sleep_for(std::chrono::milliseconds(5000));
     }
 
     return 0;

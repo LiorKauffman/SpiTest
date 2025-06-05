@@ -218,4 +218,22 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/12/cstddef \
  /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/CyclicBuffer.hpp \
  /home/Lior/Documents/projects/SpiTest/DataStruct/Include/Buffer/CyclicBuffer.h \
- /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/UartInterface/include/UartInterface.h
+ /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/UartInterface/include/UartInterface.h \
+ /home/Lior/Documents/projects/SpiTest/Parser/include/Parser.h \
+ /home/Lior/Documents/projects/SpiTest/Utils/Singleton/include/../../Singleton/include/Singleton.h \
+ /home/Lior/Documents/projects/SpiTest/Parser/include/../../Commands/include/InterfaceCommand.h \
+ /usr/include/c++/12/memory \
+ /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/12/bits/align.h /usr/include/c++/12/bit \
+ /usr/include/c++/12/bits/shared_ptr.h \
+ /usr/include/c++/12/bits/shared_ptr_base.h \
+ /usr/include/c++/12/bits/allocated_ptr.h \
+ /usr/include/c++/12/ext/concurrence.h \
+ /usr/include/c++/12/bits/shared_ptr_atomic.h \
+ /usr/include/c++/12/backward/auto_ptr.h \
+ /usr/include/c++/12/pstl/glue_memory_defs.h \
+ /usr/include/c++/12/pstl/execution_defs.h \
+ /home/Lior/Documents/projects/SpiTest/Commands/include/PowerOffPiCommand.h \
+ /home/Lior/Documents/projects/SpiTest/Commands/include/InterfaceCommand.h \
+ /usr/include/c++/12/algorithm \
+ /usr/include/c++/12/pstl/glue_algorithm_defs.h

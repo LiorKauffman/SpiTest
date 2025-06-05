@@ -129,6 +129,78 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+Commands/HciCommand.o: Commands/HciCommand.cpp.o
+.PHONY : Commands/HciCommand.o
+
+# target to build an object file
+Commands/HciCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Commands/HciCommand.cpp.o
+.PHONY : Commands/HciCommand.cpp.o
+
+Commands/HciCommand.i: Commands/HciCommand.cpp.i
+.PHONY : Commands/HciCommand.i
+
+# target to preprocess a source file
+Commands/HciCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Commands/HciCommand.cpp.i
+.PHONY : Commands/HciCommand.cpp.i
+
+Commands/HciCommand.s: Commands/HciCommand.cpp.s
+.PHONY : Commands/HciCommand.s
+
+# target to generate assembly for a file
+Commands/HciCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Commands/HciCommand.cpp.s
+.PHONY : Commands/HciCommand.cpp.s
+
+Commands/PowerOffPiCommand.o: Commands/PowerOffPiCommand.cpp.o
+.PHONY : Commands/PowerOffPiCommand.o
+
+# target to build an object file
+Commands/PowerOffPiCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o
+.PHONY : Commands/PowerOffPiCommand.cpp.o
+
+Commands/PowerOffPiCommand.i: Commands/PowerOffPiCommand.cpp.i
+.PHONY : Commands/PowerOffPiCommand.i
+
+# target to preprocess a source file
+Commands/PowerOffPiCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.i
+.PHONY : Commands/PowerOffPiCommand.cpp.i
+
+Commands/PowerOffPiCommand.s: Commands/PowerOffPiCommand.cpp.s
+.PHONY : Commands/PowerOffPiCommand.s
+
+# target to generate assembly for a file
+Commands/PowerOffPiCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.s
+.PHONY : Commands/PowerOffPiCommand.cpp.s
+
+Commands/PowerOnPiCommand.o: Commands/PowerOnPiCommand.cpp.o
+.PHONY : Commands/PowerOnPiCommand.o
+
+# target to build an object file
+Commands/PowerOnPiCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o
+.PHONY : Commands/PowerOnPiCommand.cpp.o
+
+Commands/PowerOnPiCommand.i: Commands/PowerOnPiCommand.cpp.i
+.PHONY : Commands/PowerOnPiCommand.i
+
+# target to preprocess a source file
+Commands/PowerOnPiCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.i
+.PHONY : Commands/PowerOnPiCommand.cpp.i
+
+Commands/PowerOnPiCommand.s: Commands/PowerOnPiCommand.cpp.s
+.PHONY : Commands/PowerOnPiCommand.s
+
+# target to generate assembly for a file
+Commands/PowerOnPiCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.s
+.PHONY : Commands/PowerOnPiCommand.cpp.s
+
 CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.o: CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o
 .PHONY : CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.o
 
@@ -225,6 +297,30 @@ Hello/src/Hello.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Hello/src/Hello.cpp.s
 .PHONY : Hello/src/Hello.cpp.s
 
+Parser/src/Parser.o: Parser/src/Parser.cpp.o
+.PHONY : Parser/src/Parser.o
+
+# target to build an object file
+Parser/src/Parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Parser/src/Parser.cpp.o
+.PHONY : Parser/src/Parser.cpp.o
+
+Parser/src/Parser.i: Parser/src/Parser.cpp.i
+.PHONY : Parser/src/Parser.i
+
+# target to preprocess a source file
+Parser/src/Parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Parser/src/Parser.cpp.i
+.PHONY : Parser/src/Parser.cpp.i
+
+Parser/src/Parser.s: Parser/src/Parser.cpp.s
+.PHONY : Parser/src/Parser.s
+
+# target to generate assembly for a file
+Parser/src/Parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Parser/src/Parser.cpp.s
+.PHONY : Parser/src/Parser.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -258,6 +354,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... Commands/HciCommand.o"
+	@echo "... Commands/HciCommand.i"
+	@echo "... Commands/HciCommand.s"
+	@echo "... Commands/PowerOffPiCommand.o"
+	@echo "... Commands/PowerOffPiCommand.i"
+	@echo "... Commands/PowerOffPiCommand.s"
+	@echo "... Commands/PowerOnPiCommand.o"
+	@echo "... Commands/PowerOnPiCommand.i"
+	@echo "... Commands/PowerOnPiCommand.s"
 	@echo "... CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.o"
 	@echo "... CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.i"
 	@echo "... CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.s"
@@ -270,6 +375,9 @@ help:
 	@echo "... Hello/src/Hello.o"
 	@echo "... Hello/src/Hello.i"
 	@echo "... Hello/src/Hello.s"
+	@echo "... Parser/src/Parser.o"
+	@echo "... Parser/src/Parser.i"
+	@echo "... Parser/src/Parser.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

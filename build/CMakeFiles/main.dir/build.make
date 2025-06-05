@@ -139,13 +139,73 @@ CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Lior/Documents/projects/SpiTest/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp -o CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.s
 
+CMakeFiles/main.dir/Parser/src/Parser.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Parser/src/Parser.cpp.o: /home/Lior/Documents/projects/SpiTest/Parser/src/Parser.cpp
+CMakeFiles/main.dir/Parser/src/Parser.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/Parser/src/Parser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/Parser/src/Parser.cpp.o -MF CMakeFiles/main.dir/Parser/src/Parser.cpp.o.d -o CMakeFiles/main.dir/Parser/src/Parser.cpp.o -c /home/Lior/Documents/projects/SpiTest/Parser/src/Parser.cpp
+
+CMakeFiles/main.dir/Parser/src/Parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Parser/src/Parser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Lior/Documents/projects/SpiTest/Parser/src/Parser.cpp > CMakeFiles/main.dir/Parser/src/Parser.cpp.i
+
+CMakeFiles/main.dir/Parser/src/Parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Parser/src/Parser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Lior/Documents/projects/SpiTest/Parser/src/Parser.cpp -o CMakeFiles/main.dir/Parser/src/Parser.cpp.s
+
+CMakeFiles/main.dir/Commands/HciCommand.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Commands/HciCommand.cpp.o: /home/Lior/Documents/projects/SpiTest/Commands/HciCommand.cpp
+CMakeFiles/main.dir/Commands/HciCommand.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/Commands/HciCommand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/Commands/HciCommand.cpp.o -MF CMakeFiles/main.dir/Commands/HciCommand.cpp.o.d -o CMakeFiles/main.dir/Commands/HciCommand.cpp.o -c /home/Lior/Documents/projects/SpiTest/Commands/HciCommand.cpp
+
+CMakeFiles/main.dir/Commands/HciCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Commands/HciCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Lior/Documents/projects/SpiTest/Commands/HciCommand.cpp > CMakeFiles/main.dir/Commands/HciCommand.cpp.i
+
+CMakeFiles/main.dir/Commands/HciCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Commands/HciCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Lior/Documents/projects/SpiTest/Commands/HciCommand.cpp -o CMakeFiles/main.dir/Commands/HciCommand.cpp.s
+
+CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o: /home/Lior/Documents/projects/SpiTest/Commands/PowerOffPiCommand.cpp
+CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o -MF CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o.d -o CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o -c /home/Lior/Documents/projects/SpiTest/Commands/PowerOffPiCommand.cpp
+
+CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Lior/Documents/projects/SpiTest/Commands/PowerOffPiCommand.cpp > CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.i
+
+CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Lior/Documents/projects/SpiTest/Commands/PowerOffPiCommand.cpp -o CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.s
+
+CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o: /home/Lior/Documents/projects/SpiTest/Commands/PowerOnPiCommand.cpp
+CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o -MF CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o.d -o CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o -c /home/Lior/Documents/projects/SpiTest/Commands/PowerOnPiCommand.cpp
+
+CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Lior/Documents/projects/SpiTest/Commands/PowerOnPiCommand.cpp > CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.i
+
+CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Lior/Documents/projects/SpiTest/Commands/PowerOnPiCommand.cpp -o CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
 "CMakeFiles/main.dir/Hello/src/Hello.cpp.o" \
 "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o" \
 "CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o" \
-"CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o"
+"CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o" \
+"CMakeFiles/main.dir/Parser/src/Parser.cpp.o" \
+"CMakeFiles/main.dir/Commands/HciCommand.cpp.o" \
+"CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o" \
+"CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -155,9 +215,13 @@ main: CMakeFiles/main.dir/Hello/src/Hello.cpp.o
 main: CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/SpiInterface/src/SpiInterface.cpp.o
 main: CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/UartInterface/src/UartInterface.cpp.o
 main: CMakeFiles/main.dir/CommunicationProtocols/SerialProtocol/ISerial/src/ISerial.cpp.o
+main: CMakeFiles/main.dir/Parser/src/Parser.cpp.o
+main: CMakeFiles/main.dir/Commands/HciCommand.cpp.o
+main: CMakeFiles/main.dir/Commands/PowerOffPiCommand.cpp.o
+main: CMakeFiles/main.dir/Commands/PowerOnPiCommand.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Lior/Documents/projects/SpiTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
